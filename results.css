@@ -1,0 +1,69 @@
+#resultsContainer {
+    display: flex;
+    flex-wrap: wrap; /* Permite múltiples filas */
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.video-card {
+    width: 18%; /* Asegura 5 imágenes por fila */
+    margin-bottom: 20px; /* Espacio entre filas */
+    position: relative;
+}
+
+.video-card a {
+    display: block;
+    overflow: hidden;
+    border-radius: 15px; /* Bordes redondeados */
+    transition: transform 0.3s ease;
+}
+
+.video-card img {
+    width: 100%;
+    height: 405px; /* Ajusta la altura */
+    object-fit: cover; /* Evita distorsión */
+    border-radius: 15px; /* Bordes redondeados */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.video-card a:hover img {
+    transform: scale(1.05); /* Efecto al pasar el cursor */
+}
+
+/* Estilo del título */
+.video-card h3 {
+    text-align: center;
+    margin: 10px 0 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    display: block; font-size: 16px; /* Tamaño de fuente adecuado */
+    color: #ffffff; /* Gris suave como color base */
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.video-card h3:hover{
+    color: #be0000; /* Cambia a rojo neón */
+    text-shadow: 0 0 8px #be0000, 0 0 16px #be0000; /* Efecto de resplandor sutil */
+
+}
+/* Superposición opcional */
+.overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #919191;
+    font-size: 22px;
+    text-align: center;
+}

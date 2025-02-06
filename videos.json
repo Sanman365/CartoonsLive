@@ -1,0 +1,205 @@
+
+[
+    {
+        "title": "The Batman",
+        "image": "../Imagenesfondos/POSTER-BATMAN-INDEX.JPEG",
+        "link": "../BatmanRP/BatmanRP.html"
+    },
+    {
+        "title": "Tron:legacy",
+        "image": "Imagenesfondos/POSTER_tronindex.jpg",
+        "link": "tron.html"
+    },
+    {
+        "title": "Interstellar",
+        "image": "Imagenesfondos/interestelar_index (2).jpeg",
+        "link": "interstellar.html"
+    },
+    {
+        "title": "Spider-Man",
+        "image": "Imagenesfondos/SPIDER-M_S_R-INDEX.jpeg",
+        "link": "spiderman.html"
+    }
+    ,
+    {
+        "title": "Rambo",
+        "image": "../Imagenesfondos/Rambo1.jpeg",
+        "link": "../Rambo/Rambo.html"
+    }
+    ,
+    {
+        "title": "Rambo 2",
+        "image": "../Imagenesfondos/Rambo2.jpeg",
+        "link": "../Rambo/Rambo2.html"
+    }
+    ,
+    {
+        "title": "Rambo 3",
+        "image": "../Imagenesfondos/Rambo3.jpeg",
+        "link": "../Rambo/Rambo3.html"
+    }
+    ,
+    {
+        "title": "Rambo 4",
+        "image": "../Imagenesfondos/Rambo4.jpg",
+        "link": "../Rambo/Rambo4.html"
+    }
+    ,
+    {
+        "title": "Rambo Last Blood",
+        "image": "../Imagenesfondos/rambo5.jpeg",
+        "link": "../Rambo/Rambo5.html"
+    }
+    ,
+    {
+        "title": "El Señor de los Anillo: El Retorno del Rey",
+        "image": "Imagenesfondos/elretornodelrey.jpeg",
+        "link": ".../Elsenordelosanillos/elretornodelrey.html"
+    }
+    ,
+    {
+        "title": "El Señor de los Anillo: La Comunidad del Anillo",
+        "image": "../Imagenesfondos/lacumindaddelanillo.jpeg",
+        "link": "../Elsenordelosanillos/lacomunidadelanillo.html"
+    }
+    ,
+    {
+        "title": "El Señor de los Anillo:Las Dos Torres",
+        "image": "../Imagenesfondos/lasdostorres.jpg",
+        "link": "../Elsenordelosanillos/Lasdostorres.html"
+    }
+    ,
+    {
+        "title": "Rocky ",
+        "image": "../Imagenesfondos/rocky.jpeg",
+        "link": "../Rocky/rocky.html"
+    },
+    {
+        "title": "Rocky II",
+        "image": "../Imagenesfondos/rocky2.jpeg",
+        "link": "../Rocky/rocky2.html"
+    },
+    {
+        "title": "Rocky III",
+        "image": "../Imagenesfondos/rocky3.jpeg",
+        "link": "../Rocky/rocky3.html"
+    },
+    {
+        "title": "Rocky IV",
+        "image": "../Imagenesfondos/rocky4.jpeg",
+        "link": "../Rocky/rocky4.html"
+    },
+    {
+        "title": "Rocky v",
+        "image": "../Imagenesfondos/rocky.5jpeg",
+        "link": "../Rocky/rocky5.html"
+    },
+    {
+        "title": "Rocky Balboa",
+        "image": "../Imagenesfondos/rocky6.jpg",
+        "link": "../Rocky/rocky6.html"
+    }
+    ,
+    {
+        "title": "Bad Boys",
+        "image": "../Imagenesfondos/badboys.jpg",
+       
+        "link": "../BadBoys/badboys.html"
+    }
+    ,
+    {
+        "title": "Bad Boys 2",
+        "image": "../Imagenesfondos/Bad Boys 2 - 2003.jpg",
+        "link": "../BadBoys/badboys2.html"
+    }
+    ,
+    {
+        "title": "Bad Boys 2",
+        "image": "../Imagenesfondos/Bad Boys 2 - 2003.jpg",
+        "link": "../BadBoys/badboys2.html"
+    }
+    ,
+    {
+        "title": "Bad Boys 2",
+        "image": "../Imagenesfondos/Bad Boys 2 - 2003.jpg",
+        "link": "../BadBoys/badboys2.html"
+    }
+    ,
+    {
+        "title": "Monkey Man",
+        "image": "../Imagenesfondos/monkeyman.jpeg",
+        "link": "../Solitarias/Monkeyman.html"
+    }
+    ,
+    {
+        "title": "Tetris",
+        "image": "../Imagenesfondos/tetris.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Mad Max (1979)",
+        "image": "../Imagenesfondos/madmax.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Mad Max (1981)",
+        "image": "../Imagenesfondos/madmax2.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Mad Max (1985)",
+        "image": "../Imagenesfondos/madmax3.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Mad Max: Fury Road",
+        "image": "../Imagenesfondos/madmaxfury.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Mad Max: Furiosa",
+        "image": "../Imagenesfondos/madmaxfuriosa.jpeg",
+        "link": "../Solitarias/Tetris.html"
+    }
+    ,
+    {
+        "title": "Lalaland",
+        "image": "../Imagenesfondos/lalaland.jpg",
+        "link": "../Solitarias/laland.html"
+    }
+    ,
+    {
+        "title": "Hotel Mumbai",
+        "image": "../Imagenesfondos/mumbai.jpeg",
+        "link": "../Solitarias/hotelmumbai.html"
+    }
+    ,
+    {
+        "title": "El Maquinista",
+        "image": "../Imagenesfondos/maquinista.jpeg",
+        "link": "../Solitarias/maquinista.html"
+    }
+    ,
+    {
+        "title": "Godzilla Minus One",
+        "image": "../Imagenesfondos/godzilaminusone.jpeg",
+        "link": "../Solitarias/godzillaminusone.html"
+    }
+    ,
+    {
+        "title": "El Niño y la Garza",
+        "image": "../Imagenesfondos/garza.jpg",
+        "link": "../Solitarias/Garza.html"
+    }
+    ,
+    {
+        "title": "Her",
+        "image": "../Imagenesfondos/her.jpeg",
+        "link": "../Solitarias/her.html"
+    }
+]
