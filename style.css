@@ -389,13 +389,14 @@ alphabet-nav {
     color: #ffffff;
     text-align: center;
     padding: 10px;
-    font-size: 12px;
+    font-size: 18px;
     font-family: 'Arial', sans-serif;
     border-top: 1px solid #444444;
     width: 99%;
     height: 80px;
     bottom: 0;
     position: relative;
+    padding-bottom: 50px;
   }
   
   .fondo {
