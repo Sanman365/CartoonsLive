@@ -9,7 +9,7 @@ if (episodeMatch) {
     let episodeNumber = episodeMatch[2]; // Número de episodio
 
     // Construir la ruta de la imagen desde "imagenes_1/" (sin espacios en el nombre de carpeta)
-    let episodeImage = `../imagenes_1/${seasonNumber}x${episodeNumber}.jpg`;
+    let episodeImage = `../imagenes1/${seasonNumber}x${episodeNumber}.jpg`;
 
     // Asignar la imagen al contenedor con id "episode-img"
     let imgElement = document.getElementById("episode-img");
@@ -19,7 +19,7 @@ if (episodeMatch) {
 
         // Manejo de error si la imagen no existe
         imgElement.onerror = function() {
-            this.src = "../imagenes_1/imagen-no-encontrada.jpg"; // Imagen alternativa
+            this.src = "../imagenes1/imagen-no-encontrada.jpg"; // Imagen alternativa
         };
     } else {
         console.error("No se encontró el elemento con ID 'episode-img'");
