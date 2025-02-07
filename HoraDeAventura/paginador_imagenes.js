@@ -1,23 +1,29 @@
+// Obtener el nombre del archivo actual (ejemplo: "1x1.html")
 let currentPageEpisode = window.location.pathname.split('/').pop();
 
-// Aquí iría el resto de tu código
-
 // Extraer temporada y episodio usando una expresión regular
-let episodeMatch = currentPage.match(/(\d+)x(\d+)\.html/);
+let episodeMatch = currentPageEpisode.match(/(\d+)x(\d+)\.html/);
 
-if (match) {
-    let seasonNumber = match[1]; // Número de temporada (por si lo necesitas después)
-    let episodeNumber = match[2]; // Número de episodio
+if (episodeMatch) {
+    let seasonNumber = episodeMatch[1]; // Número de temporada
+    let episodeNumber = episodeMatch[2]; // Número de episodio
 
-    // Construir la ruta de la imagen desde "imagenes 1/"
-    let episodeImage = `../imagenes 1/${seasonNumber}x${episodeNumber}.jpg`;
+    // Construir la ruta de la imagen desde "imagenes_1/" (sin espacios en el nombre de carpeta)
+    let episodeImage = `../imagenes_1/${seasonNumber}x${episodeNumber}.jpg`;
 
-    // Asignar la imagen al contenedor
+    // Asignar la imagen al contenedor con id "episode-img"
     let imgElement = document.getElementById("episode-img");
-    imgElement.src = episodeImage;
 
-    // Manejo de error si la imagen no existe
-    imgElement.onerror = function() {
-        this.src = "../imagenes 1/imagen-no-encontrada.jpg"; // Imagen alternativa
-    };
+    if (imgElement) {
+        imgElement.src = episodeImage;
+
+        // Manejo de error si la imagen no existe
+        imgElement.onerror = function() {
+            this.src = "../imagenes_1/imagen-no-encontrada.jpg"; // Imagen alternativa
+        };
+    } else {
+        console.error("No se encontró el elemento con ID 'episode-img'");
+    }
+} else {
+    console.error("No se pudo extraer la temporada y episodio del nombre de archivo");
 }
