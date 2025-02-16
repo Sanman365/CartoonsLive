@@ -2,7 +2,7 @@ import os
 import shutil
 
 # Definir las rutas de las carpetas de origen y destino
-origen = r'C:\Users\Personal\Documents\CartoonLive\CartoonsLive\HoraDeAventura\Temporada5'
+origen = r'C:\Users\Personal\Documents\CartoonLive\CartoonsLive'
 destino = r'C:\Users\Personal\Desktop\Temporada4_temporal'
 
 # Verificar si la carpeta de origen existe
@@ -32,7 +32,7 @@ print("Archivos en la carpeta de origen:", os.listdir(origen))
 # Recorrer los archivos en la carpeta de origen
 for archivo in os.listdir(origen):
     # Verificar si el archivo sigue el patrón "3x1.html", "3x2.html", etc.
-    if archivo.startswith('5x') and archivo.endswith('.html'):
+    if archivo.startswith('2x') and archivo.endswith('.html'):
         # Extraer el número después de "3x"
         numero = archivo.split('x')[1].split('.')[0]
         
