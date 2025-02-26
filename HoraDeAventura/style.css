@@ -386,6 +386,42 @@ padding-bottom: 20%;
 .show {
     display: block;
 }
+
+.report-buttons {
+    margin-top: 10px;
+  }
+  
+  .report-button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #report-buffer {
+    background-color: #ff6b6b; /* Rojo */
+  }
+  
+  #report-quality {
+    background-color: #4ecdc4; /* Turquesa */
+  }
+  
+  #report-audio {
+    background-color: #ff9f43; /* Naranja */
+  }
+  
+  #report-other {
+    background-color: #8395a7; /* Gris */
+  }
+  
+  .report-button:hover {
+    opacity: 0.8;
+  }
+  
 ::-webkit-scrollbar {
     width: 8px; /* Ancho de la barra de desplazamiento */
     height: 8px; /* Altura de la barra de desplazamiento horizontal */

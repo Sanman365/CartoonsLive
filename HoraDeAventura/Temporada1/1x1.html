@@ -71,18 +71,41 @@
 <iframe src="https://filemoon.to/e/f7aj49w9n4z0/1x1_-_P_nico_en_la_Fiesta_del_Palacio_Hora_de_Aventura_Online" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
 </div>
 </section>
+<br><br>
+<br>
 
-
-   
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("menu");
-        menu.classList.toggle("open");
-    }
-</script>
+    <button class="boton-reporte" onclick="enviarReporte('No se reproduce')">No se reproduce</button>
+    <button class="boton-reporte" onclick="enviarReporte('Audio desincronizado')">Audio desincronizado</button>
+    <button class="boton-reporte" onclick="enviarReporte('Calidad baja')">Calidad baja</button>
+    <button class="boton-reporte" onclick="enviarReporte('Otro problema')">Otro problema</button>
 
 <script src="../Paginador_episodios.js"></script>
 <script src="../paginador_imagenes.js"></script>
+<script>
+    function enviarReporte(tipo) {
+        const videoUrl = document.querySelector('iframe').src;
+        const formData = new FormData();
+        formData.append('video_url', videoUrl);
+        formData.append('tipo_reporte', tipo);
+
+        fetch('reporte.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => alert(data))
+        .catch(error => console.error('Error:', error));
+    }
+</script>
+<script>
+      // Obtener la URL del video del iframe
+      document.getElementById('video_url').value = document.querySelector('iframe').src;
+
+// Obtener la ruta del archivo HTML actual
+document.getElementById('ruta_archivo').value = window.location.pathname;
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../superbase.js"></script>
 
 </body>
 </html>
