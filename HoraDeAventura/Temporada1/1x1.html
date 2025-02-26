@@ -81,22 +81,7 @@
 
 <script src="../Paginador_episodios.js"></script>
 <script src="../paginador_imagenes.js"></script>
-<script>
-    function enviarReporte(tipo) {
-        const videoUrl = document.querySelector('iframe').src;
-        const formData = new FormData();
-        formData.append('video_url', videoUrl);
-        formData.append('tipo_reporte', tipo);
 
-        fetch('reporte.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => alert(data))
-        .catch(error => console.error('Error:', error));
-    }
-</script>
 <script>
       // Obtener la URL del video del iframe
       document.getElementById('video_url').value = document.querySelector('iframe').src;
