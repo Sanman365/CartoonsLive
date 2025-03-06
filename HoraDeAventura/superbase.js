@@ -6,11 +6,10 @@ const supabaseClient = createClient(supabaseUrl, supabaseKey);
 
 // Función para enviar el reporte
 function enviarReporte(tipo) {
-    console.log("Botón clickeado. Tipo de reporte:", tipo); // Verifica que la función se ejecuta
     const videoUrl = document.querySelector('iframe').src;
     const rutaArchivo = window.location.pathname;
 
-    console.log("Datos a enviar:", { tipo, videoUrl, rutaArchivo }); // Verifica los datos
+    console.log("Datos a enviar:", { tipo, videoUrl, rutaArchivo });
 
     supabaseClient
         .from('reportes')
@@ -30,19 +29,5 @@ function enviarReporte(tipo) {
         });
 }
 
-// Verifica la conexión con Supabase
-async function verificarConexion() {
-    const { data, error } = await supabaseClient
-        .from('reportes')
-        .select('*')
-        .limit(1);
-
-    if (error) {
-        console.error("Error al conectar con Supabase:", error);
-    } else {
-        console.log("Conexión exitosa. Datos:", data);
-    }
-}
-
-// Llama a la función para verificar la conexión
-verificarConexion();
+// Expone la función al ámbito global
+window.enviarReporte = enviarReporte;
