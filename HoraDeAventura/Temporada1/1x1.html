@@ -7,21 +7,18 @@
     <!-- Vinculación de los archivos CSS -->
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script type="module" src="../superbase.js"></script>
-
-    
+    <!-- Incluye el SDK de Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Incluye tu archivo JavaScript como módulo -->
+    <script type="module" src="../superbase.js"></script>
 </head>
 <body>
     <br>
-    
     <div class="index"></div>
 
-
-
-<a href="/index.html">
-    <h1 >Cartoons</h1>
-</a>
+    <a href="/index.html">
+        <h1>Cartoons</h1>
+    </a>
     <button class="menu-toggle" onclick="toggleMenu()"></button>
 
     <!-- Menú desplegable -->
@@ -48,49 +45,43 @@
         <img id="episode-img" src="" alt="">
     </div>
 
-   
+    <div class="flecha">
+        <a id="next-link">
+            <img src="../espada.jpg" alt="Anterior">
+        </a>
+    </div>
 
+    <!-- Flecha para avanzar -->
+    <div class="flecha-derecha">
+        <a id="prev-link">
+            <img src="../espada.jpg" alt="Siguiente">
+        </a>
+    </div>
 
+    <section>
+        <div>
+            <iframe src="https://filemoon.to/e/f7aj49w9n4z0/1x1_-_P_nico_en_la_Fiesta_del_Palacio_Hora_de_Aventura_Online" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+    </section>
+    <br><br>
+    <br>
 
-<div class="flecha">
-    <a id="next-link">
-        <img src="../espada.jpg" alt="Anterior">
-    </a>
-</div>
+    <!-- Botones de reporte con IDs únicos -->
+    <button class="boton-reporte" id="reportarNoReproduce">No se reproduce</button>
+    <button class="boton-reporte" id="reportarAudio">Audio desincronizado</button>
+    <button class="boton-reporte" id="reportarCalidad">Calidad baja</button>
+    <button class="boton-reporte" id="reportarOtro">Otro problema</button>
 
-<!-- Flecha para avanzar -->
-<div class="flecha-derecha">
-    <a id="prev-link">
-        <img src="../espada.jpg" alt="Siguiente">
-    </a>
-</div>
+    <!-- Scripts adicionales -->
+    <script src="../Paginador_episodios.js"></script>
+    <script src="../paginador_imagenes.js"></script>
 
-
-
-
-<section>
-<div>
-<iframe src="https://filemoon.to/e/f7aj49w9n4z0/1x1_-_P_nico_en_la_Fiesta_del_Palacio_Hora_de_Aventura_Online" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
-</div>
-</section>
-<br><br>
-<br>
-
-    <button class="boton-reporte" id="reportarBtn">No se reproduce</button>
-    <button class="boton-reporte" id="reportarBtn">Audio desincronizado</button>
-    <button class="boton-reporte" id="reportarBtn">Calidad baja</button>
-    <button class="boton-reporte" id="reportarBtn">Otro problema</button>
-
-<script src="../Paginador_episodios.js"></script>
-<script src="../paginador_imagenes.js"></script>
-
-<script>
-      // Obtener la URL del video del iframe
-      document.getElementById('video_url').value = document.querySelector('iframe').src;
-
-// Obtener la ruta del archivo HTML actual
-document.getElementById('ruta_archivo').value = window.location.pathname;
-</script>
-
+    <script>
+        // Asignar eventos a los botones de reporte
+        document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+        document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+        document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+        document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+    </script>
 </body>
 </html>
