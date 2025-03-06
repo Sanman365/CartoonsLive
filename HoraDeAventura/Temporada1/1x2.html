@@ -7,7 +7,9 @@
     <!-- Vinculación de los archivos CSS -->
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Incluye tu archivo JavaScript como módulo -->
+    <script type="module" src="../superbase.js"></script>
     
 </head>
 <body>
@@ -70,6 +72,11 @@
 </section>
 
 
+    <!-- Botones de reporte con IDs únicos -->
+    <button class="boton-reporte" id="reportarNoReproduce">No se reproduce</button>
+    <button class="boton-reporte" id="reportarAudio">Audio desincronizado</button>
+    <button class="boton-reporte" id="reportarCalidad">Calidad baja</button>
+    <button class="boton-reporte" id="reportarOtro">Otro problema</button>
    
 <script>
     function toggleMenu() {
@@ -79,6 +86,12 @@
 </script>
 <script src="../Paginador_episodios.js"></script>
 <script src="../paginador_imagenes.js"></script>
-
+<script>
+    // Asignar eventos a los botones de reporte
+    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+</script>
 </body>
 </html>
