@@ -9,7 +9,6 @@
 <link href="../style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet"/>
 <!-- Incluye el SDK de Supabase -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <!-- Incluye tu archivo JavaScript como módulo -->
 <script src="/CartoonsLive/superbase.js" type="module"></script>
 </head>
@@ -25,7 +24,6 @@
 <a href="#"></a>
 <a href="#"></a>
 <a href="../series.html">Inicio</a>
-
 </div>
 <div class="recuadro"></div>
 <div class="recuadro2"></div>
@@ -51,6 +49,11 @@
 <button class="boton-reporte" id="reportarAudio">Audio desincronizado</button>
 <button class="boton-reporte" id="reportarCalidad">Calidad baja</button>
 <button class="boton-reporte" id="reportarOtro">Otro problema</button>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<!-- Incluye tu archivo JavaScript como módulo -->
+<script src="../superbase.js" type="module"></script>
+
+<!-- Botones de reporte con IDs únicos -->
 <script>
     // Asignar eventos a los botones de reporte
     document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
@@ -58,10 +61,16 @@
     document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
     document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
 </script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <!-- Incluye tu archivo JavaScript como módulo -->
-<script src="../superbase.js" type="module"></script>
-
+<!-- Botones de reporte con IDs únicos -->
+<script>
+    // Asignar eventos a los botones de reporte
+    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+</script>
+<!-- Incluye tu archivo JavaScript como módulo -->
 </div>
 </section>
 <br/><br/>
@@ -72,7 +81,7 @@
         menu.classList.toggle("open");
     }
 </script>
-    <script src="../Paginador_episodios.js"></script>
+<script src="../Paginador_episodios.js"></script>
 <script src="../paginador_imagenes.js"></script>
 </body>
 </html>

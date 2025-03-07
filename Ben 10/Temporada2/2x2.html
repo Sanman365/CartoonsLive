@@ -1,26 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <!-- Vinculación de los archivos CSS -->
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-
-    
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title></title>
+<!-- Vinculación de los archivos CSS -->
+<link href="../style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <br>
-    
-    <div class="index"></div>
-
-
-
+<br/>
+<div class="index"></div>
 <a href="/index.html">
-    <h1 >Cartoons</h1>
+<h1>Cartoons</h1>
 </a>
-    <!-- <button class="menu-toggle" onclick="toggleMenu()"></button>
+<!-- <button class="menu-toggle" onclick="toggleMenu()"></button>
 
     Menú desplegable 
     <div id="menu" class="menu">
@@ -33,44 +28,45 @@
         <a href="#">Temporada 4</a>
   
     </div>-->
-
-    <div class="recuadro"></div>
-    <div class="recuadro2"></div>
-
-    <div class="port">
-        <img id="episode-img" src="" alt="">
-    </div>
-
-   
-
-
-
-    <a id="next-link">
-        <button class="btn-ben10 btn-right">Avanzar</button>    </a>
-
+<div class="recuadro"></div>
+<div class="recuadro2"></div>
+<div class="port">
+<img alt="" id="episode-img" src=""/>
+</div>
+<a id="next-link">
+<button class="btn-ben10 btn-right">Avanzar</button> </a>
 <!-- Flecha para avanzar -->
-    <a id="prev-link">
-        <button class="btn-ben10 btn-left">Retroceder</button>    </a>
-
-
-
-
+<a id="prev-link">
+<button class="btn-ben10 btn-left">Retroceder</button> </a>
 <section>
 <div>
- <iframe src="https://filemoon.to/e/fbutbxb3lgel/2x2" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="640" height="360" allowfullscreen></iframe> </iframe>
+<iframe allowfullscreen="" frameborder="0" height="360" marginheight="0" marginwidth="0" scrolling="no" src="https://filemoon.to/e/fbutbxb3lgel/2x2" width="640"></iframe>
+<!-- Botones de reporte con IDs únicos -->
+<button class="boton-reporte" id="reportarNoReproduce">No se reproduce</button>
+<button class="boton-reporte" id="reportarAudio">Audio desincronizado</button>
+<button class="boton-reporte" id="reportarCalidad">Calidad baja</button>
+<button class="boton-reporte" id="reportarOtro">Otro problema</button>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<!-- Incluye tu archivo JavaScript como módulo -->
+<script src="../superbase.js" type="module"></script>
+
+<!-- Botones de reporte con IDs únicos -->
+<script>
+    // Asignar eventos a los botones de reporte
+    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+</script>
+<!-- Incluye tu archivo JavaScript como módulo -->
 </div>
 </section>
-
-
-   
 <script>
     function toggleMenu() {
         var menu = document.getElementById("menu");
         menu.classList.toggle("open");
     }
 </script>
-
 <script src="../Paginador_episodios.js"></script>
-
 </body>
 </html>

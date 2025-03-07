@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinepatos - Reportar Problema</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cinepatos - Reportar Problema</title>
+<style>
         body { font-family: Arial, sans-serif; background-color: #f0f0f0; padding: 20px; }
         iframe { width: 100%; height: 300px; border: 1px solid #ccc; margin-bottom: 20px; }
         .boton-reporte {
@@ -18,7 +19,7 @@
             border-radius: 5px;
         }
     </style>
-    <script>
+<script>
         function enviarReporte(tipo) {
             const videoUrl = document.querySelector('iframe').src;
             const formData = new FormData();
@@ -36,17 +37,33 @@
     </script>
 </head>
 <body>
-    <h1>Cinepatos - Reportar Problema del Video</h1>
+<h1>Cinepatos - Reportar Problema del Video</h1>
+<iframe allowfullscreen="" src="https://example.com/video"></iframe>
+<!-- Botones de reporte con IDs únicos -->
+<button class="boton-reporte" id="reportarNoReproduce">No se reproduce</button>
+<button class="boton-reporte" id="reportarAudio">Audio desincronizado</button>
+<button class="boton-reporte" id="reportarCalidad">Calidad baja</button>
+<button class="boton-reporte" id="reportarOtro">Otro problema</button>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<!-- Incluye tu archivo JavaScript como módulo -->
+<script src="../superbase.js" type="module"></script>
 
-    <iframe src="https://example.com/video" allowfullscreen></iframe>
-
-    <h2>¿Qué problema tiene el video?</h2>
-    <form action="reporte.php" method="post">
-      <p>Elige el problema del video:</p>
-      <button type="submit" name="reporte" value="No se reproduce">No se reproduce</button>
-      <button type="submit" name="reporte" value="Audio desincronizado">Audio desincronizado</button>
-      <button type="submit" name="reporte" value="Calidad baja">Calidad baja</button>
-      <button type="submit" name="reporte" value="Otro problema">Otro problema</button>
-  </form>
+<!-- Botones de reporte con IDs únicos -->
+<script>
+    // Asignar eventos a los botones de reporte
+    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+</script>
+<!-- Incluye tu archivo JavaScript como módulo -->
+<h2>¿Qué problema tiene el video?</h2>
+<form action="reporte.php" method="post">
+<p>Elige el problema del video:</p>
+<button name="reporte" type="submit" value="No se reproduce">No se reproduce</button>
+<button name="reporte" type="submit" value="Audio desincronizado">Audio desincronizado</button>
+<button name="reporte" type="submit" value="Calidad baja">Calidad baja</button>
+<button name="reporte" type="submit" value="Otro problema">Otro problema</button>
+</form>
 </body>
 </html>
