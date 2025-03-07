@@ -390,7 +390,7 @@ padding-bottom: 20%;
 .boton-reporte {
     position: relative;
     left: 66%;
-    top: 580px; /* Ajusta este valor según sea necesario */
+    top: 380px; /* Ajusta este valor según sea necesario */
     display: block;
     padding: 10px 15px;
     margin: 5px;
