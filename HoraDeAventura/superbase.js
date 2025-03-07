@@ -1,5 +1,12 @@
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
+
+// Configuración de Supabase
+const supabaseUrl = 'https://ihxhquvjopmpgjysugqw.supabase.coz';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImloeGhxdXZqb3BtcGdqeXN1Z3F3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA1OTgyNDIsImV4cCI6MjA1NjE3NDI0Mn0.G6NZ15PSg0U4tZ0CJwjzEud3ns94usGgQ3rUp7VCDp0';
+const supabase = createClient(supabaseUrl, supabaseKey);
+
 // Función para enviar el reporte
-function enviarReporte(tipo) {
+async function enviarReporte(tipo) {
     const videoUrl = document.querySelector('iframe').src;
     const rutaArchivo = window.location.pathname;
 
@@ -22,12 +29,19 @@ function enviarReporte(tipo) {
     // Guardar la hora actual en localStorage
     localStorage.setItem(`lastReportTime_${videoUrl}`, Date.now());
 
-    // Mostrar mensaje de éxito
-    alert("Reporte enviado correctamente. ¡Gracias!");
+    // Insertar datos en Supabase
+    const { data, error } = await supabase
+        .from('reportes') // Reemplaza 'reportes' con el nombre de tu tabla
+        .insert([{ tipo: tipo, video_url: videoUrl, ruta_archivo: rutaArchivo }]);
 
-    // Aquí puedes agregar lógica adicional, como enviar el reporte a un servidor si es necesario.
-    // Por ejemplo, usando fetch() para enviar los datos a un backend.
+    if (error) {
+        console.error("Error al enviar el reporte:", error);
+        alert("Hubo un error al enviar el reporte.");
+    } else {
+        console.log("Reporte enviado correctamente:", data);
+        alert("Reporte enviado correctamente. ¡Gracias!");
+    }
 }
 
 // Expone la función al ámbito global
-window.enviarReporte = enviarReporte;                   
+window.enviarReporte = enviarReporte;
