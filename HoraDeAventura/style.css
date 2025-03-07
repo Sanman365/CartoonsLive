@@ -388,17 +388,20 @@ padding-bottom: 20%;
 }
 
 .boton-reporte {
-    display: inline-block;
+    position: relative;
+    left: 66%;
+    top: 580px; /* Ajusta este valor según sea necesario */
+    display: block;
     padding: 10px 15px;
     margin: 5px;
-    background-color: #e74c3c;
+    background-color: #e60000;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 .boton-reporte:hover {
-    background-color: #c0392b;
+    background-color: #ff1a1a;
 }
 ::-webkit-scrollbar {
     width: 8px; /* Ancho de la barra de desplazamiento */

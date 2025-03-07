@@ -1,77 +1,64 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panico en la Fiesta del Palacio</title>
-    <!-- Vinculación de los archivos CSS -->
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-
-    
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Panico en la Fiesta del Palacio</title>
+<!-- Vinculación de los archivos CSS -->
+<link href="../style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <br>
-    
-    <div class="index"></div>
-
-
-
+<br/>
+<div class="index"></div>
 <a href="/index.html">
-    <h1 >Cartoons</h1>
+<h1>Cartoons</h1>
 </a>
-    <button class="menu-toggle" onclick="toggleMenu()"></button>
-
-    <!-- Menú desplegable -->
-    <div id="menu" class="menu">
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="">Inicio</a>
-        <a href="#">Temporada 1</a>
-        <a href="#">Temporada 2</a>
-        <a href="#">Temporada 3</a>
-        <a href="#">Temporada 4</a>
-        <a href="#">Temporada 5</a>
-        <a href="#">Temporada 6</a>
-        <a href="#">Temporada 7</a>
-        <a href="#">Temporada 8</a>
-        <a href="#">Temporada 9</a>
-        <a href="#">Temporada 10</a>
-    </div>
-
-    <div class="recuadro"></div>
-    <div class="recuadro2"></div>
-
-    <div class="port">
-        <img id="episode-img" src="" alt="">
-    </div>
-
-    
-
-<div class="flecha">
-    <a href="../Temporada9/9x1.html">
-        <img src="../espada.jpg" alt="Anterior">
-    </a>
+<button class="menu-toggle" onclick="toggleMenu()"></button>
+<!-- Menú desplegable -->
+<div class="menu" id="menu">
+<a href="#"></a>
+<a href="#"></a>
+<a href="../series.html">Inicio</a>
 </div>
-
+<div class="recuadro"></div>
+<div class="recuadro2"></div>
+<div class="port">
+<img alt="" id="episode-img" src=""/>
+</div>
+<div class="flecha">
+<a href="../Temporada9/9x1.html">
+<img alt="Anterior" src="../espada.jpg"/>
+</a>
+</div>
 <!-- Flecha para avanzar -->
 <div class="flecha-derecha">
-    <a id="prev-link">
-        <img src="../espada.jpg" alt="Siguiente">
-    </a>
+<a id="prev-link">
+<img alt="Siguiente" src="../espada.jpg"/>
+</a>
 </div>
-
-
-
-
 <section>
 <div>
-    <iframe src="https://filemoon.to/e/hrz3zh72gnch/8x27_-_La_Nube_de_Luz_-_Hora_de_Aventura_Online" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="640" height="360" allowfullscreen></iframe></iframe></iframe>
+<iframe allowfullscreen="" frameborder="0" height="360" marginheight="0" marginwidth="0" scrolling="no" src="https://filemoon.to/e/hrz3zh72gnch/8x27_-_La_Nube_de_Luz_-_Hora_de_Aventura_Online" width="640"></iframe>
+<!-- Botones de reporte con IDs únicos -->
+<button class="boton-reporte" id="reportarNoReproduce">No se reproduce</button>
+<button class="boton-reporte" id="reportarAudio">Audio desincronizado</button>
+<button class="boton-reporte" id="reportarCalidad">Calidad baja</button>
+<button class="boton-reporte" id="reportarOtro">Otro problema</button>
+<script>
+    // Asignar eventos a los botones de reporte
+    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<!-- Incluye tu archivo JavaScript como módulo -->
+<script src="../superbase.js" type="module"></script>
+
 </div>
 </section>
-
-
-   
 <script>
     function toggleMenu() {
         var menu = document.getElementById("menu");
@@ -80,6 +67,5 @@
 </script>
 <script src="../Paginador_episodios.js"></script>
 <script src="../paginador_imagenes.js"></script>
-
 </body>
 </html>
