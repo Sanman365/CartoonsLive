@@ -31,5 +31,16 @@
 <h1></h1>
 <div id="resultsContainer"></div>
 <script src="results.js"></script>
+
+<!-- Botones de reporte con IDs únicos -->
+<script>
+    // Asignar eventos a los botones de reporte
+    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+</script>
+<!-- Incluye tu archivo JavaScript como módulo -->
+
 </body>
 </html>

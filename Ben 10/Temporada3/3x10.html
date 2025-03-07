@@ -50,15 +50,7 @@
 <!-- Incluye tu archivo JavaScript como módulo -->
 <script src="../superbase.js" type="module"></script>
 
-<!-- Botones de reporte con IDs únicos -->
-<script>
-    // Asignar eventos a los botones de reporte
-    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
-    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
-    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
-    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
-</script>
-<!-- Incluye tu archivo JavaScript como módulo -->
+
 </div>
 </section>
 <script>
@@ -68,5 +60,16 @@
     }
 </script>
 <script src="../Paginador_episodios.js"></script>
+
+<!-- Botones de reporte con IDs únicos -->
+<script>
+    // Asignar eventos a los botones de reporte
+    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+</script>
+<!-- Incluye tu archivo JavaScript como módulo -->
+
 </body>
 </html>

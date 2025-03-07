@@ -80,7 +80,7 @@
               <li><a href="#Y">Y</a></li>
               <li><a href="#Z">Z</a></li>
           </ul>
-      </nav>-->
+      </nav>
 <br/><br/><br/>
 <section id="search-section">
 <input id="searchInput" placeholder="Buscar..." type="text"/>
@@ -88,7 +88,7 @@
 <div id="suggestions"></div>
 </section>
 <br/><br/><br/>
-<center>
+<center>-->
 <!--
       <div class="container-carousel">
         <div class="carruseles" id="slider">
@@ -339,5 +339,16 @@ Disfruta de tu series animadas favoritas aqui en Cartoons LIve.
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
       </script>
 <script defer="" src="/_vercel/insights/script.js"></script>
+
+<!-- Botones de reporte con IDs únicos -->
+<script>
+    // Asignar eventos a los botones de reporte
+    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+</script>
+<!-- Incluye tu archivo JavaScript como módulo -->
+
 </body>
 </html>

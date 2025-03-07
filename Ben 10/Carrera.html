@@ -44,6 +44,16 @@
 <!-- Incluye tu archivo JavaScript como módulo -->
 <script src="../superbase.js" type="module"></script>
 
+
+</div></section>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("open");
+    }
+</script>
+<script src="../Paginador_episodios.js"></script>
+
 <!-- Botones de reporte con IDs únicos -->
 <script>
     // Asignar eventos a los botones de reporte
@@ -53,13 +63,6 @@
     document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
 </script>
 <!-- Incluye tu archivo JavaScript como módulo -->
-</div></section>
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("menu");
-        menu.classList.toggle("open");
-    }
-</script>
-<script src="../Paginador_episodios.js"></script>
+
 </body>
 </html>

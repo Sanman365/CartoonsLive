@@ -30,4 +30,4 @@ function enviarReporte(tipo) {
 }
 
 // Expone la función al ámbito global
-window.enviarReporte = enviarReporte;
+window.enviarReporte = enviarReporte;                   
