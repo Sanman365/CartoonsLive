@@ -1,8 +1,6 @@
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
-
-// Configuración de Supabase
-const supabaseUrl = 'https://ihxhquvjopmpgjysugqw.supabase.coz';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImloeGhxdXZqb3BtcGdqeXN1Z3F3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA1OTgyNDIsImV4cCI6MjA1NjE3NDI0Mn0.G6NZ15PSg0U4tZ0CJwjzEud3ns94usGgQ3rUp7VCDp0';
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const supabaseUrl = 'TU_URL_SUPABASE';
+const supabaseKey = 'TU_API_KEY_SUPABASE';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Función para enviar el reporte
@@ -42,6 +40,14 @@ async function enviarReporte(tipo) {
         alert("Reporte enviado correctamente. ¡Gracias!");
     }
 }
+
+// Asignar eventos a los botones de reporte
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('reportarNoReproduce').addEventListener('click', () => enviarReporte('No se reproduce'));
+    document.getElementById('reportarAudio').addEventListener('click', () => enviarReporte('Audio desincronizado'));
+    document.getElementById('reportarCalidad').addEventListener('click', () => enviarReporte('Calidad baja'));
+    document.getElementById('reportarOtro').addEventListener('click', () => enviarReporte('Otro problema'));
+});
 
 // Expone la función al ámbito global
 window.enviarReporte = enviarReporte;
