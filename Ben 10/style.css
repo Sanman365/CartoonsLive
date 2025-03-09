@@ -30,6 +30,71 @@ body{
             z-index: -1; /* Asegura que la imagen esté detrás del contenido */
             font-family: 'Poppins', sans-serif; /* Nueva fuente */
         }
+        .button {
+            all: unset;
+            display: flex;
+            align-items: center;
+            top: 1%;
+            position: fixed;
+            padding: 0.6em 2em;
+            border: rgb(136, 0, 0) solid 0.15em;
+            border-radius: 0.25em;
+            color: rgb(206, 0, 0);
+            font-size: 1.35em;
+            font-weight: 600;
+            cursor: pointer;
+            overflow: hidden;
+            transition: border 300ms, color 300ms;
+            user-select: none;
+            z-index: 5;
+          }
+          
+          .button p {   
+            z-index: 1;
+            left: -0%;
+          }
+          
+          .button:hover {
+            color: #212121;
+          }
+          
+          .button:active {
+            border-color: rgb(255, 27, 27);
+          }
+          
+          .button::after, .button::before {
+            content: "";
+            position: absolute;
+            width: 9em;
+            aspect-ratio: 1;
+            background: rgb(219, 0, 0);
+            opacity: 75%;
+            border-radius: 50%;
+            transition: transform 500ms, background 300ms;
+          }
+          
+          .button::before {
+            left: 0;
+            transform: translateX(-8em);
+          }
+          
+          .button::after {
+            right: 0;
+            transform: translateX(8em);
+          }
+          
+          .button:hover:before {
+            transform: translateX(-1em);
+          }
+          
+          .button:hover:after {
+            transform: translateX(1em);
+          }
+          
+          .button:active:before,
+          .button:active:after {
+            background: rgb(253, 10, 10);
+          }
         .menu {
             position: fixed;
             top: 0;
