@@ -477,9 +477,7 @@ padding-bottom: 20%;
 
 footer {
     position: relative;
-     text-align: center;
-    justify-content: center;
-    
+    top: 500px;
     background-color: #1c1c1c;
     color: #ffffff;
     padding: 10px;
