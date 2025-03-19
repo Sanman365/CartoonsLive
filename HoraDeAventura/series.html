@@ -18,6 +18,55 @@
 </a>
 <br/><br/><br/><br/><br/><br/><br/><br/>
 <!-- Temporada 1 -->
+
+
+<div class="menu">
+    <!-- Botón 1 -->
+    <button class="menu-btn">Botón 1</button>
+    <div class="submenu">
+        <a href="#" class="submenu-item">
+            <img src="imagen1.jpg" alt="Imagen 1">
+            <div class="submenu-content">
+                <h3>Título 1</h3>
+                <p>Descripción del botón 1.</p>
+            </div>
+        </a>
+        <a href="#" class="submenu-item">
+            <img src="imagen2.jpg" alt="Imagen 2">
+            <div class="submenu-content">
+                <h3>Título 2</h3>
+                <p>Descripción del botón 2.</p>
+            </div>
+        </a>
+        <!-- Repite este bloque para los otros 18 botones -->
+    </div>
+
+    <!-- Botón 2 -->
+    <button class="menu-btn">Botón 2</button>
+    <div class="submenu">
+        <a href="#" class="submenu-item">
+            <img src="imagen3.jpg" alt="Imagen 3">
+            <div class="submenu-content">
+                <h3>Título 3</h3>
+                <p>Descripción del botón 3.</p>
+            </div>
+        </a>
+        <a href="#" class="submenu-item">
+            <img src="imagen4.jpg" alt="Imagen 4">
+            <div class="submenu-content">
+                <h3>Título 4</h3>
+                <p>Descripción del botón 4.</p>
+            </div>
+        </a>
+        <!-- Repite este bloque para los otros 18 botones -->
+    </div>
+
+    <!-- Repite este bloque para los otros 8 botones principales -->
+</div>
+
+
+
+
 <button class="temporada-btn" onclick="toggleChapters('temporada1')">Temporada 1</button>
 <div class="chapters-list" id="temporada1">
 <!-- 25 capítulos con enlaces a páginas -->
@@ -347,6 +396,7 @@
 <a class="chapter-btn" href="Temporada10/10x13.html">Capítulo 13</a>
 <a class="chapter-btn" href="Temporada10/10x14.html">Capítulo 14</a>
 </div>
+<!--
 <div class="container">
 <div class="dropdown">
 <button class="dropbtn" onclick="toggleDropdown()">Desplegar Lista</button>
@@ -355,31 +405,63 @@
 <a href="#">Opción 2</a>
 <a href="#">Opción 3</a>
 </div>
-</div>
+</div>-->
 </div>
 <script>
-  // Función para mostrar/ocultar la lista desplegable
-  function toggleDropdown() {
-      var dropdownContent = document.getElementById("dropdownContent");
-      dropdownContent.classList.toggle("show");
-  }
+ document.addEventListener("DOMContentLoaded", function() {
+            const menuButtons = document.querySelectorAll('.menu-btn');
 
-  // Cerrar la lista desplegable si el usuario hace clic fuera de ella
-  window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          for (var i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-              }
-          }
-      }
-  }
+            menuButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const submenu = this.nextElementSibling;
+                    submenu.style.display = submenu.style.display === 'flex' ? 'none' : 'flex';
+                });
+            });
+        });
 </script>
-<footer> <p>Derechos reservados © 2025</p>
-  Disfruta de tu series animadas favoritas aqui en Cartoons LIve. 
-          </footer>
+<div class="menu">
+    <!-- Botón 1 -->
+    <button class="menu-btn">Botón 1</button>
+    <div class="submenu">
+        <a href="#" class="submenu-item">
+            <img src="imagen1.jpg" alt="Imagen 1">
+            <div class="submenu-content">
+                <h3>Título 1</h3>
+                <p>Descripción del botón 1.</p>
+            </div>
+        </a>
+        <a href="#" class="submenu-item">
+            <img src="imagen2.jpg" alt="Imagen 2">
+            <div class="submenu-content">
+                <h3>Título 2</h3>
+                <p>Descripción del botón 2.</p>
+            </div>
+        </a>
+        <!-- Repite este bloque para los otros 18 botones -->
+    </div>
+
+    <!-- Botón 2 -->
+    <button class="menu-btn">Botón 2</button>
+    <div class="submenu">
+        <a href="#" class="submenu-item">
+            <img src="imagen3.jpg" alt="Imagen 3">
+            <div class="submenu-content">
+                <h3>Título 3</h3>
+                <p>Descripción del botón 3.</p>
+            </div>
+        </a>
+        <a href="#" class="submenu-item">
+            <img src="imagen4.jpg" alt="Imagen 4">
+            <div class="submenu-content">
+                <h3>Título 4</h3>
+                <p>Descripción del botón 4.</p>
+            </div>
+        </a>
+        <!-- Repite este bloque para los otros 18 botones -->
+    </div>
+
+    <!-- Repite este bloque para los otros 8 botones principales -->
+</div>
 <script src="srcipt.js"></script>
 <script src="Imagen.js"></script>
 </head></html>

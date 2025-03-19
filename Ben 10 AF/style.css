@@ -610,11 +610,12 @@ footer {
 
   @media (max-width: 768px) {
     body {
-        font-family: 'Press Start 2P', cursive; /* Fuente estilo TRON */
-        padding: 0; /* Eliminar espacio extra */
+        cursor: url('') 16 16, auto; /* Reemplaza con tu imagen */
         margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
     }
-
+    
     /* Fondo de la página con imagen difuminada */
     body::before {
         content: "";
@@ -623,219 +624,556 @@ footer {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('../Imagenesfondos/Fridensfondo.jpeg') no-repeat center center;
+        background: url('Imagenes/fondo.jpeg') no-repeat center center;
         background-size: cover;
-        filter: blur(5px); /* Aplica desenfoque solo a la imagen de fondo */
         z-index: -1; /* Asegura que la imagen esté detrás del contenido */
     }
- /* Contenedor de la imagen */
- 
-
-/* Imagen con borde blanco */
-
-.image-container {
-    position: relative;
-    justify-items: center;
-}
-
-/* Imagen con borde blanco */
-.image-container img {
     
-    position: relative;
-    justify-items: center;
-    left: 0%;
-    margin-top: -15%;
-    margin-bottom: 30%;
-}
-   
-iframe{
-position: relative;
-justify-items: center;
-    left: 0%;
-    height: 70%;
-    width: 100%;
-}
-.video-container iframe {
-    position: relative;
-    justify-items: center;
-        left: 0%;
+    .contenido {
+        position: relative;
+        z-index: 1; /* Asegura que el contenido esté por encima */
+        padding: 5%;
+        color: white; /* Ajusta el color según el fondo */
+    }
+    
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
         height: 100%;
+        background-color: #f4f4f4;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+    
+    .button {
+        all: unset;
+        display: flex;
+        align-items: center;
+        top: 1%;
+        position: fixed;
+        padding: 0.6em 2em;
+        border: rgb(136, 0, 0) solid 0.15em;
+        border-radius: 0.25em;
+        color: rgb(206, 0, 0);
+        font-size: 1.35em;
+        font-weight: 600;
+        cursor: pointer;
+        overflow: hidden;
+        transition: border 300ms, color 300ms;
+        user-select: none;
+        z-index: 5;
+    }
+    
+    .button p {
+        z-index: 1;
+        left: -0%;
+    }
+    
+    .button:hover {
+        color: #212121;
+    }
+    
+    .button:active {
+        border-color: rgb(255, 27, 27);
+    }
+    
+    .button::after,
+    .button::before {
+        content: "";
+        position: absolute;
+        width: 9em;
+        aspect-ratio: 1;
+        background: rgb(219, 0, 0);
+        opacity: 75%;
+        border-radius: 50%;
+        transition: transform 500ms, background 300ms;
+    }
+    
+    .button::before {
+        left: 0;
+        transform: translateX(-8em);
+    }
+    
+    .button::after {
+        right: 0;
+        transform: translateX(8em);
+    }
+    
+    .button:hover:before {
+        transform: translateX(-1em);
+    }
+    
+    .button:hover:after {
+        transform: translateX(1em);
+    }
+    
+    .button:active:before,
+    .button:active:after {
+        background: rgb(253, 10, 10);
+    }
+    
+    /* Enlaces del menú */
+    .menu a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 1.2em;
+        color: #000000;
+        font-weight: 600;
+        transition: 0.2s;
+    }
+    
+    .menu a:hover {
+        background: rgba(255, 0, 0, 0.459);
+    }
+    
+    /* Botón de abrir/cerrar con imagen */
+    .menu-toggle {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+        background: url('Caracol.jpeg') no-repeat center;
+        background-size: contain;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+    }
+    
+    /* Clase para abrir el menú */
+    .open {
+        width: 70%;
+        min-width: 200px;
+    }
+    
+    .recuadro {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 2px solid #fff;
+        border-radius: 10px;
+        margin-top: 5%;
+        padding: 2%;
+    }
+    
+    .recuadro2 {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 2px solid #fff;
+        border-radius: 10px;
+        margin-top: 5%;
+        padding: 2%;
+    }
+    
+    .index {
+        position: fixed;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%);
         width: 100%;
-        
- }
-
- .tabs {
-    border: 5px solid #333;
-    width: 80%;
-    background-color: white;
-    position: relative;
-}
-
-.tab-list {
-    position: relative;
-    left: 0%;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    width:100%;
-    list-style: none;
-    background-color: #333;
-}
-
-.tab {
-    padding: 5px 8px;
-    cursor: pointer;
-    color: white;
-    background-color: #333;
-}
-
-.tab.active {
-    background-color: #666;
-}
-
-.tab-content {
-    padding: 20px;
-}
-
-.tab-panel {
-    display: none;
-}
-
-.tab-panel.active {
-    display: block;
-}
-
- /* Trailer */
-
- .standalone-video {
-    width: 85%;
-    margin: 0 auto; /* Centrando el iframe independiente */
-}
-
-.standalone-video iframe {
-    position: relative;
-    justify-items: center;
-    left: 0%;
-    width: 80%; /* Fijando el tamaño del iframe */
-    height: 80%;
-    border: 2px solid #333; /* Borde opcional */
-}
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 150px; /* Aumentada la altura de la barra */
-    padding: 0;
-    position: relative;
-    width: 100%;
-    top: -10%;
-    left: 0;
-    z-index: 9999;
-}
-
-.navbar-item {
-    position: relative;
-    width: 33.33%; /* Cada imagen ocupa un tercio del ancho de la barra */
-    height: 100%;
-    overflow: hidden;
-}
-
-.navbar-item img {
-    height: 70%; /* Aumentada la altura de las imágenes */
-    width: 100%;
-    object-fit: cover;
-    transition: all 0.3s ease;
-}
-
-.navbar-item h2 {
-    position: absolute;
-    top: 50%; /* Centrado verticalmente */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    color: white;
-    font-size: 35px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    transition: all 0.3s ease;
-}
-
-/* Efecto de hover para la imagen y el texto */
-.navbar-item:hover img {
-    filter: brightness(0.5);
-}
-
-.navbar-item:hover h2 {
-    color: rgb(221, 150, 84);
-}
-
-/* Estilos para los enlaces */
-.navbar-item a {
-    display: block;
-    height: 100%;
-    width: 70%;
-    text-decoration: none;
-}
-
-
-    .navbar {
-        height: 120px; /* Altura ajustada para móviles */
+        height: 10%;
+        background-color: rgba(0, 0, 0);
+        border: 2px solid #fff;
+        z-index: 5;
     }
-
-    .navbar-item {
-        width: 50%; /* Cada item ocupa la mitad del ancho */
-    }
-
-    .navbar-item img {
-        height: 55%; /* Ajuste de la altura de la imagen */
-    }
-
-    .navbar-item h2 {
-        font-size: 15px;
-        top: 28%; /* Ajuste para centrar el texto */
-    }
-
-
-
-
-
-footer {
-    position: relative;
-     text-align: center;
-    justify-content: center;
     
-    background-color: #1c1c1c;
-    color: #ffffff;
-    padding: 10px;
-    font-size: 10px;
-    font-family: 'Arial', sans-serif;
-    border-top: 1px solid #444444;
-    margin-top: 20px;
-    width: 100%;
-    height: 80px;
-    bottom: 0;
+    .port {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        padding-bottom: 5%;
+        padding-top: 10%;
+    }
     
-    font-size: 10px;
-  }
-  footer p{
-    position: relative;
-    text-align: center;
-   justify-content: center;
-   
-  }
-  
-  .fondo {
-    position: fixed;
-      width: 400px;
-      height: 400px;
-    background-image: url('Imagenesfondos/pato.png');
-    background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-  }
+    .port img {
+        width: 70%;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+    }
+    
+    /* Contenedor de la imagen */
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    /* Imagen con borde blanco */
+    .image-container img {
+        width: 80%;
+        height: auto;
+        border: 5px solid #201f1f;
+        border-radius: 10px;
+        image-rendering: crisp-edges;
+        box-shadow: 0 0 10px rgb(0, 0, 0);
+    }
+    
+    h1 {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: inline-block;
+        color: white;
+        padding: 10px 20px;
+        overflow: hidden;
+        z-index: 5;
+        margin: 0;
+    }
+    
+    h1::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 120%;
+        height: 100%;
+        background: linear-gradient(-75deg, rgba(255, 140, 0, 0) 30%, rgba(255, 0, 0, 0.8) 50%, rgba(255, 140, 0, 0) 70%);
+        animation: destello 4s infinite linear;
+    }
+    
+    @keyframes destello {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+    
+    p {
+        font-size: 0.9em;
+        position: relative;
+        top: 14%;
+        text-align: center;
+        width: 80%;
+        left: 10%;
+        color: whitesmoke;
+    }
+    
+    /* Contenedor de contenido centrado */
+    .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+    
+    /* Estilo para el iframe independiente */
+    iframe {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 25%;
+        height: 200px;
+        width: 90%;
+    }
+    
+    /* Estilos para las flechas */
+    .btn-ben10 {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%);
+        top: 85%;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        margin: 10px;
+    }
+    
+    /* Botón izquierdo (color azul de Ben 10) */
+    .btn-left {
+        background-color: #0c6b00;
+        color: white;
+        left: 30%;
+    }
+    
+    .btn-left:hover {
+        background-color: #3600b3;
+    }
+    
+    /* Botón derecho (color naranja de Ben 10) */
+    .btn-right {
+        background-color: #0c6b00;
+        color: white;
+        left: 70%;
+    }
+    
+    .btn-right:hover {
+        background-color: #3600b3;
+    }
+    
+    /* Contenedores de las flechas */
+    .flecha, .flecha-derecha {
+        display: inline-block;
+        margin: 20px;
+    }
+    
+    .image-container2 {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+    }
+    
+    /* Contenedor del paginador */
+    .paginador-container {
+        width: 90%;
+        max-width: 350px;
+        margin: 20px auto;
+        background-color: #1a1a1a;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    #temporadas-container {
+        margin-top: 10%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Botones de temporada */
+    .temporada-btn {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        text-align: center;
+        width: 80%;
+        transition: background-color 0.3s ease;
+    }
+    
+    .temporada-btn:hover {
+        background-color: #19d600da;
+        color: #000;
+    }
+    
+    /* Contenedor de capítulos */
+    .chapters-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+        display: none;
+    }
+    
+    /* Botones de capítulo */
+    .chapter-btn {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #444;
+        color: #fff;
+        padding: 10px 12px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .chapter-btn:hover {
+        background-color: #19d600da;
+        color: #000;
+    }
+    
+    /* Estilos para el contenedor principal */
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        padding-bottom: 20%;
+    }
+    
+    /* Estilos para el div que contiene la lista desplegable */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        left: -45%;
+    }
+    
+    /* Estilo para el botón que despliega la lista */
+    .dropbtn {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1em;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    /* Estilo para el contenido desplegable */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #777;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+        left: 100%;
+        top: 0;
+        transform: scale(1.05);
+        transform-origin: left top;
+    }
+    
+    /* Estilo para los elementos de la lista */
+    .dropdown-content a {
+        color: white;
+        font-size: 0.9em;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Cambia el color de fondo al pasar el ratón sobre los elementos */
+    .dropdown-content a:hover {
+        background-color: #f5a623;
+    }
+    
+    .boton-reporte {
+        position: relative;
+        left: 66%;
+        top: 300px;
+        display: block;
+        padding: 10px 15px;
+        margin: 5px;
+        background-color: #e60000;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .boton-reporte:hover {
+        background-color: #ff1a1a;
+    }
+    
+    /* Estilos para el fondo oscurecido */
+    .fondo-oscuro {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    
+    /* Estilos para el aviso */
+    :root {
+        --aviso-bg: linear-gradient(to top, #3916ff, #3600b3);
+        --aviso-error-bg: linear-gradient(to top, #3916ff, #3600b3);
+        --aviso-color: #000000;
+        --aviso-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        --aviso-border-radius: 10px;
+        --aviso-padding: 20px 30px;
+        --aviso-transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .aviso {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        padding: var(--aviso-padding);
+        background: var(--aviso-bg);
+        color: var(--aviso-color);
+        border-radius: var(--aviso-border-radius);
+        box-shadow: var(--aviso-shadow);
+        transition: var(--aviso-transition);
+        z-index: 1000;
+        opacity: 0;
+    }
+    
+    .aviso-error {
+        background: var(--aviso-error-bg);
+    }
+    
+    /* Animación para mostrar el aviso */
+    .aviso.mostrar {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+    /* Clase para mostrar el contenido desplegable */
+    .show {
+        display: block;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f4f4f4;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #e60000;
+        border-radius: 10px;
+        border: 2px solid #ff1a1a;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #ff1a1a;
+    }
+    
+    ::-webkit-scrollbar-button {
+        display: none;
+    }
+    
+    footer {
+        position: relative;
+        text-align: center;
+        justify-content: center;
+        background-color: #1c1c1c;
+        color: #ffffff;
+        padding: 10px;
+        font-size: 0.9em;
+        font-family: 'Arial', sans-serif;
+        border-top: 1px solid #444444;
+        margin-top: 20px;
+        margin-bottom: 0%;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        left: -1%;
+    }
+    
+    footer p {
+        position: relative;
+        text-align: center;
+        justify-content: center;
+    }
 }
