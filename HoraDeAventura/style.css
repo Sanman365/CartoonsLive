@@ -567,10 +567,10 @@ padding-bottom: 20%;
             /* Botón de abrir/cerrar con imagen */
             .menu-toggle {
                 position: fixed;
-                top: 5px;
-                left: 12px;
-                width: 70px; /* Aumenta el tamaño del botón */
-                height: 70px; /* Aumenta el tamaño del botón */
+                top: -2.5%;
+                left: 1%;
+                width: 18%; /* Aumenta el tamaño del botón */
+                height: 18%; /* Aumenta el tamaño del botón */
                 background: url('Caracol.jpeg') no-repeat center;
                 background-size: contain;
                 border: none;
@@ -727,7 +727,7 @@ padding-bottom: 20%;
     left: 55%;
     transform: translate(-50%);
     transform: rotate(90deg);
-    top: 92%;
+    top: 93.5%;
     }
     
     .flecha-derecha{
@@ -735,7 +735,7 @@ padding-bottom: 20%;
         left: 10%;
         transform: translate(-50%);
         transform: rotate(270deg);
-        top: 91.35%;
+        top: 93%;
         }
     
         .flecha img, .flecha-derecha img {
@@ -897,8 +897,8 @@ padding-bottom: 20%;
     
     .boton-reporte {
         position: relative;
+        margin-top: -10%;
         left: 4%;
-        top: 520px; /* Ajusta este valor según sea necesario */
         display:inline-block;
         text-align: center;
         padding: 6px 1px;
