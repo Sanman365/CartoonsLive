@@ -89,6 +89,360 @@
     border-radius: 10px;
     padding: 20px; /* opcional para espaciar el contenido */
 }
+.slider-container {
+    width: 100%;
+    max-width: 600px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: rgba(30, 30, 30, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .episodios-slider {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .episodio {
+    flex: 0 0 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .episodio-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .episodio-img {
+    flex: 0 0 120px;
+    height: 100%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .episodio-img img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .episodio-info {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden; /* Asegura que el texto no se desborde */
+  }
+  
+  .episodio h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .rating-star {
+    color: gold;
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  
+  .rating-value {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .episodio-desc {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limita a 3 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    max-height: 54px; /* 3 líneas * 1.4 line-height * 13px */
+  }
+  
+  .slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .dot.active {
+    background: gold;
+  }
+   /* Estilos del slider de personajes - La Vaca y el Pollito */
+ /* SLIDER DE ACTORES DE VOZ - LA VACA Y EL POLLITO */
+.characters-slider {
+    width: 100%;
+    max-width: 600px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    margin: 30px auto;
+    border-radius: 10px;
+    background: rgba(255, 253, 208, 0.9); /* Fondo amarillo claro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #FFD700;
+  }
+  
+  .characters-container {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .character {
+    flex: 0 0 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .character-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .character-img {
+    flex: 0 0 120px;
+    height: 120px; /* Altura fija */
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 3px;
+    border: 1px solid #FFB6B6;
+  }
+  
+  .character-img img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Cambiado de cover a contain */
+    object-position: center top;
+    border-radius: 5px;
+  }
+  
+  .character-info {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .character-name {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #FF6B6B; /* Rojo pastel */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+  }
+  
+  .voice-actor {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+  
+  .voice-label {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  
+  .actor-name {
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .character-desc {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+  
+  .characters-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .char-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 107, 107, 0.3);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .char-dot.active {
+    background: #FF6B6B;
+  }
+  .crew-slider {
+    width: 100%;
+    max-width: 600px;
+    height: 240px; /* Un poco más alto para títulos largos */
+    overflow: hidden;
+    position: relative;
+    margin: 30px auto;
+    border-radius: 10px;
+    background: rgba(255, 248, 220, 0.9); /* Fondo beige claro */
+    box-shadow: 0 4px 15px rgba(210, 180, 140, 0.3);
+    border: 2px solid #D2B48C; /* Borde café claro */
+  }
+
+  .crew-container {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .crew-member {
+    flex: 0 0 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .crew-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  .crew-photo {
+    flex: 0 0 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #FF6B6B;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .crew-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .crew-info {
+    flex: 1;
+  }
+
+  .crew-role {
+    color: #8B4513; /* Café oscuro */
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .crew-name {
+    font-size: 20px;
+    color: #FF4500; /* Naranja rojizo */
+    margin: 0 0 8px 0;
+    font-weight: bold;
+  }
+
+  .crew-bio {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Puntos de navegación (igual que los otros sliders) */
+  .crew-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .crew-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(210, 180, 140, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .crew-dot.active {
+    background: #8B4513;
+  }
 .img-rec {
     position: relative; /* Cambiado a relative si está dentro de un flujo */
     top: 0%;

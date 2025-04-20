@@ -10,7 +10,7 @@ body{
             left: 0;
             width: 100%;
             height: 90%;
-            background-color: rgba(0, 0, 0);
+            background: url('Imagenes/fondo.jpeg') no-repeat center center;
             background-size: cover;
             z-index: -1; /* Asegura que la imagen esté detrás del contenido */
             font-family: 'Poppins', sans-serif; /* Nueva fuente */
@@ -30,6 +30,7 @@ body{
             z-index: -1; /* Asegura que la imagen esté detrás del contenido */
             font-family: 'Poppins', sans-serif; /* Nueva fuente */
         }
+        
         .button {
             all: unset;
             display: flex;
@@ -162,7 +163,7 @@ body{
                 left: 50%;
                 transform: translate(-50%);
                 width: 50%; /* Puedes ajustar el tamaño */
-                height: 15%; /* Puedes ajustar el tamaño */
+                height: 30%; /* Puedes ajustar el tamaño */
                 background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
                 border: 2px solid #fff; /* Borde blanco */
                 position: absolute;
@@ -182,35 +183,6 @@ body{
             border: 2px solid #fff; /* Borde blanco */
             z-index: 5;
         }
-        .button-menu {
-            position: fixed;
-            top: 30%;
-            left: 2%;
-            color: white;
-            text-decoration: none;
-            font-size: 32px;
-            border: none;
-            background: none;
-            font-weight: 500;
-            font-family: 'Poppins', sans-serif;
-          }
-          
-          .button-menu::before {
-            margin-left: auto;
-          }
-          
-         .button-menu::after, .button-menu::before {
-            content: '';
-            width: 0%;
-            height: 2px;
-            background: #f44336;
-            display: block;
-            transition: 0.5s;
-          }
-          
-          .button-menu:hover::after, .button-menu:hover::before {
-            width: 100%;
-          }
           .port{
             position:absolute;
             left: 56.5%;
@@ -311,50 +283,27 @@ width: 30%;
 
 }
 
-   /* Estilos para las flechas */
-  /* Estilos generales para los botones */
-  .btn-ben10 {
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%);
-    top: 75%;
-    font-size: 28px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 10px;
+.flecha{
+position: absolute;
+left: 50%;
+transform: translate(-50%);
+top: 35%;
+transform: scale(0.64);
 }
 
-/* Botón izquierdo (color azul de Ben 10) */
-.btn-left {
-    background-color: #e2a344; /* Azul similar al de Ben 10 */
-    color: white;
-   left: 40%;
+.flecha2{
+    position: absolute;
+left: 20%;
+transform: translate(-50%);
+top: 10%;
+transform: scale(0.35);
 }
 
-.btn-left:hover {
-    background-color: #b38900; /* Azul más oscuro al hacer hover */
-}
+    .flecha img, .flecha-derecha img {
+        width: 60%; /* Mantiene el tamaño de la imagen */
+        cursor: pointer;
+    }
 
-/* Botón derecho (color naranja de Ben 10) */
-.btn-right {
-    background-color: #e2a344; /* Azul similar al de Ben 10 */
-    color: white;
-    left:60%;
-}
-
-.btn-right:hover {
-    background-color: #b38900; /* Azul más oscuro al hacer hover */
-}
-
-/* Contenedores de las flechas */
-.flecha, .flecha-derecha {
-    display: inline-block; /* Para que estén en línea */
-    margin: 20px; /* Espaciado entre las flechas */
-}
 .image-container2{
     width: 100%;
     height: auto; /* Mantener la proporción de la imagen */
@@ -499,6 +448,11 @@ padding-bottom: 20%;
 .dropdown-content a:hover {
     background-color: #f5a623; /* Fondo naranja */
 }
+
+/* Clase para mostrar el contenido desplegable */
+.show {
+    display: block;
+}
 .boton-reporte {
     position: relative;
     left: 66%;
@@ -529,9 +483,9 @@ padding-bottom: 20%;
 
 /* Estilos para el aviso */
 :root {
-    --aviso-bg: linear-gradient(to top, #3916ff, #3600b3); /* Amarillo/naranja suave */
-    --aviso-error-bg: linear-gradient(to top, #3916ff, #3600b3); /* Amarillo/naranja más claro */
-    --aviso-color: #000000; /* Texto oscuro */
+    --aviso-bg: linear-gradient(to top, #00a516, #00a838); /* Amarillo/naranja suave */
+    --aviso-error-bg: linear-gradient(to top, #00a516, #00a838); /* Amarillo/naranja más claro */
+    --aviso-color: #333; /* Texto oscuro */
     --aviso-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     --aviso-border-radius: 10px; /* Bordes redondeados */
     --aviso-padding: 20px 30px; /* Padding horizontal y vertical */
@@ -563,10 +517,6 @@ padding-bottom: 20%;
     opacity: 1; /* Visible */
     transform: translate(-50%, -50%) scale(1); /* Escala normal */
 }
-/* Clase para mostrar el contenido desplegable */
-.show {
-    display: block;
-}
 ::-webkit-scrollbar {
     width: 8px; /* Ancho de la barra de desplazamiento */
     height: 8px; /* Altura de la barra de desplazamiento horizontal */
@@ -596,7 +546,7 @@ footer {
     position: relative;
      text-align: center;
     justify-content: center;
-    
+    top: 800px;
     background-color: #1c1c1c;
     color: #ffffff;
     padding: 10px;
