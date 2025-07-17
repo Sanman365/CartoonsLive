@@ -134,3 +134,36 @@ const slider = document.querySelector('.episodios-slider');
       startCrewAutoSlide();
     });
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    // Obtener el nombre del archivo actual (ej: "1x1.html")
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    // Buscar en localStorage primero (para mejor performance)
+    const storedTitle = localStorage.getItem(`episode-${currentPage}-title`);
+    
+    if (storedTitle) {
+        document.getElementById('episode-title').textContent = storedTitle;
+    } else {
+        // Hacer fetch al index.html para extraer el título
+        fetch('../series.html')
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const linkElement = doc.querySelector(`a[href*="${currentPage}"]`);
+                
+                if (linkElement) {
+                    const title = linkElement.getAttribute('data-title') || 
+                                 linkElement.querySelector('p').textContent;
+                    
+                    // Mostrar el título y guardar en localStorage
+                    document.getElementById('episode-title').textContent = title;
+                    localStorage.setItem(`episode-${currentPage}-title`, title);
+                }
+            })
+            .catch(error => {
+                console.error('Error al cargar el título:', error);
+                document.getElementById('episode-title').textContent = "Episodio sin título";
+            });
+    }
+});

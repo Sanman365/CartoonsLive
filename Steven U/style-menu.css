@@ -213,7 +213,7 @@ background: gold;
 .characters-slider {
     width: 100%;
     max-width: 600px;
-    height: 240px; /* Un poco más alto */
+    height: 215px; /* Un poco más alto */
     overflow: hidden;
     position: relative;
     margin: 30px auto;

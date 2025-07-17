@@ -1,21 +1,21 @@
-body{
-    cursor: url('') 16 16, auto; /* Reemplaza con tu imagen */
+Body {
+        cursor: url('') 16 16, auto;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-}
-        /* Fondo de la página con imagen difuminada */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 10%;
-            left: 0;
-            width: 100%;
-            height: 90%;
-            background: url('Imagenes/fondo.jpeg') no-repeat center center;
-            background-size: cover;
-            z-index: -1; /* Asegura que la imagen esté detrás del contenido */
-            font-family: 'Poppins', sans-serif; /* Nueva fuente */
-        }
-
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #1c1c1c;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        z-index: -1;
+    }
 
 .contenido {
     position: relative;
@@ -109,6 +109,45 @@ body{
             transition: 0.3s;
             padding-top: 60px;
         }
+
+       .button-menu {
+  width: 8%; /* Aproximadamente proporcional a los 120px originales */
+  height: 56%; /* Altura relativa */
+  margin: 1%;
+  background: linear-gradient(145deg, #3a0000, #1a0000);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: Consolas, Courier New, monospace;
+  border: solid #ff1e1e 1px;
+  font-size: 16px;
+  color: #ff4d4d;
+  transition: 500ms;
+  border-radius: 5px;
+  box-shadow:
+    -1px -5px 15px #ff1e1e,
+    5px 5px 15px #ff1e1e,
+    inset 5px 5px 10px #1a0000,
+    inset -5px -5px 10px #1a0000;
+}
+
+.button-menu:hover {
+  box-shadow:
+    0 0 20px #ff1e1e,
+    0 0 30px #ff1e1e,
+    0 0 40px #ff1e1e;
+  color: #ffffff;
+  transition: 500ms;
+}
+
+.button-menu:active {
+  box-shadow:
+    0 0 30px #ff1e1e,
+    0 0 60px #ff1e1e;
+  color: #ffffff;
+  transition: 100ms;
+}
+
 
         /* Enlaces del menú */
         .menu a {
@@ -283,26 +322,45 @@ width: 30%;
 
 }
 
-.flecha{
-position: absolute;
-left: 50%;
-transform: translate(-50%);
-top: 35%;
-transform: scale(0.64);
-}
-
-.flecha2{
+  /* Estilos para las flechas */
+  /* Estilos generales para los botones */
+  .btn-ben10 {
     position: absolute;
-left: 20%;
-transform: translate(-50%);
-top: 10%;
-transform: scale(0.35);
+    left: 60%;
+    transform: translate(-50%);
+    top: 35%;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
 }
 
-    .flecha img, .flecha-derecha img {
-        width: 60%; /* Mantiene el tamaño de la imagen */
-        cursor: pointer;
-    }
+/* Botón izquierdo (color azul de Ben 10) */
+.btn-left {
+    background-color: #ff1e1e; /* Azul similar al de Ben 10 */
+    color: white;
+   left: 35%;
+}
+
+.btn-left:hover {
+    background-color: #3600b3; /* Azul más oscuro al hacer hover */
+}
+
+/* Botón derecho (color naranja de Ben 10) */
+.btn-right {
+    background-color: #ff1e1e; /* Naranja similar al de Ben 10 */
+    color: white;
+    left:65%;
+}
+
+.btn-right:hover {
+    background-color: #3600b3; /* Naranja más oscuro al hacer hover */
+}
+
 
 .image-container2{
     width: 100%;
